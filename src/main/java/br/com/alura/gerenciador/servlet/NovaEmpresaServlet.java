@@ -12,23 +12,24 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/nova-empresa")
 public class NovaEmpresaServlet extends HttpServlet {
-	
+
 	private static final long serialVersionUID = 1L;
 
+	@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+
 		System.out.println("cadastrando nova empresa");
 		PrintWriter out = response.getWriter();
-		
+
 		String nomeEmpresa = request.getParameter("nome");
 		Empresa empresa = new Empresa();
 		Banco banco = new Banco();
-		
+
 		empresa.setId(1);
 		empresa.setNome(nomeEmpresa);
-		
+
 		banco.adiciona(empresa);
-		
+
 		// ChamarJSP
 		RequestDispatcher rd = request.getRequestDispatcher("/nova-empresa-criada.jsp");
 		request.setAttribute("empresa", empresa.getNome());
