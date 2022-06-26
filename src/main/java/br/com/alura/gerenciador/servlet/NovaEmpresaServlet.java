@@ -34,7 +34,6 @@ public class NovaEmpresaServlet extends HttpServlet {
 		out.println(nomeEmpresa);
 		out.println("</h1>");
 		out.println("<p>");
-		out.println("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed elementum vel ex ut gravida. Aenean rutrum, magna nec scelerisque egestas, est justo condimentum ante, non dapibus felis eros sed ante. Vivamus lacinia luctus viverra. Quisque scelerisque sem tempus dictum condimentum. Mauris maximus tincidunt nibh, vitae molestie felis sodales non. Sed sed elit fringilla, luctus nisl sit amet, ultrices justo. Sed consectetur dignissim nunc at fringilla. ");
 		out.println("</p>");
 		out.println("</body>");
 		out.println("</html>");
