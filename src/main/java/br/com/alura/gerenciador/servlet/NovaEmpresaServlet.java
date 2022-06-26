@@ -15,9 +15,19 @@ public class NovaEmpresaServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		System.out.println("cadastrando nova empresa");
 		PrintWriter out = response.getWriter();
+		
 		String nomeEmpresa = request.getParameter("nome");
+		Empresa empresa = new Empresa();
+		Banco banco = new Banco();
+		
+		empresa.setId(1);
+		empresa.setNome(nomeEmpresa);
+		
+		banco.adiciona(empresa);
+		
 		out.println("<html>");
 		out.println("<body>");
 		out.println("<h1>");
