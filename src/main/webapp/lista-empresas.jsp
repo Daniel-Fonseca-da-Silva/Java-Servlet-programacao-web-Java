@@ -12,6 +12,12 @@
 </head>
 <body>
 	<h2>Lista de empresas: <br></h2>
+	
+		<c:if test="${ not empty empresa }">
+			<h1>${ empresa }</h1>
+			<p>Nova empresa ${ empresa } foi cadastrada no sistema com sucesso!</p>
+		</c:if>
+		
 	<ul>
 		<c:forEach items="${ empresas }" var="empresa">
 			
