@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>Aviso da página JSP</title>
 </head>
 	<body>
 		<c:if test="${ not empty empresa }">
