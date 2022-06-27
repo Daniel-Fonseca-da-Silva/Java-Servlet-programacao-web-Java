@@ -1,7 +1,6 @@
 package br.com.alura.gerenciador.servlet;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -19,8 +18,6 @@ public class NovaEmpresaServlet extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 		System.out.println("cadastrando nova empresa");
-		PrintWriter out = response.getWriter();
-
 		String nomeEmpresa = request.getParameter("nome");
 		Empresa empresa = new Empresa();
 		Banco banco = new Banco();
